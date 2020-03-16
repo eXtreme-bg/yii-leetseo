@@ -33,13 +33,22 @@ class LeetSeoSearchEngines extends CApplicationComponent {
     public $keywords;
 
     /**
-     * The value used for <meta name="robots"> tag
+     * The value used for <meta name="robots" /> tag
      *
      * The propery is optional.
      *
      * @var string|null
      */
     public $robots;
+
+    /**
+     * The value used for <link rel="canonical" /> tag
+     *
+     * The propery is optional.
+     *
+     * @var string|null
+     */
+    public $canonical;
 
     /**
      * Set title, description, keywords and robots
@@ -122,6 +131,20 @@ class LeetSeoSearchEngines extends CApplicationComponent {
         }
 
         $this->robots = $robots;
+    }
+
+    /**
+     * Set canonical
+     *
+     * @param string $canonical
+     * @throws CException
+     */
+    public function setCanonical(string $canonical) : void {
+        if (!is_string($canonical)) {
+            throw new CException('The type for variable `canonical` is wrong.');
+        }
+
+        $this->canonical = $canonical;
     }
 
 }
