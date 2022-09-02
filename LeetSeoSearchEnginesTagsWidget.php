@@ -14,5 +14,4 @@ class LeetSeoSearchEnginesTagsWidget extends CWidget {
             'se' => Yii::app()->leetSeo
         ]);
     }
-
 }

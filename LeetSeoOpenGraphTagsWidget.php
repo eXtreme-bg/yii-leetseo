@@ -14,5 +14,4 @@ class LeetSeoOpenGraphTagsWidget extends CWidget  {
             'og' => Yii::app()->leetOpenGraph
         ]);
     }
-
 }

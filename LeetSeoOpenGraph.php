@@ -73,7 +73,7 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      *
      * The propery is optional.
      *
-     * @var int|null
+     * @var integer|null
      */
     public $imageWidth;
 
@@ -82,7 +82,7 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      *
      * The propery is optional.
      *
-     * @var int|null
+     * @var integer|null
      */
     public $imageHeight;
 
@@ -217,7 +217,7 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      *
      * The propery is optional.
      *
-     * @var int|null
+     * @var integer|null
      */
     public $videoWidth;
 
@@ -226,7 +226,7 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      *
      * The propery is optional.
      *
-     * @var int|null
+     * @var integer|null
      */
     public $videoHeight;
 
@@ -250,7 +250,6 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      * {@inheritDoc}
      */
     public function init() {
-        //
         $this->url = Yii::app()->createAbsoluteUrl(Yii::app()->request->url);
 
         return parent::init();
@@ -261,9 +260,9 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      * @param string|null $description
      * @param string|null $image
      * @param string|null $url
-     * @throws CException
+     * @return void
      */
-    public function setTags(string $title = null, string $description = null, string $image = null, string $url = null) : void {
+    public function setTags(?string $title = null, ?string $description = null, ?string $image = null, ?string $url = null): void {
         if (!empty($title)) {
             $this->setTitle($title);
         }
@@ -285,9 +284,9 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      * Set title
      *
      * @param string $title
-     * @throws CException
+     * @return void
      */
-    public function setTitle(string $title) : void {
+    public function setTitle(string $title): void {
         if (!is_string($title)) {
             throw new CException('The type for variable `title` is wrong.');
         }
@@ -299,9 +298,9 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      * Set description
      *
      * @param string $description
-     * @throws CException
+     * @return void
      */
-    public function setDescription(string $description) : void {
+    public function setDescription(string $description): void {
         if (!is_string($description)) {
             throw new CException('The type for variable `description` is wrong.');
         }
@@ -313,9 +312,9 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      * Set image
      *
      * @param string $image
-     * @throws CException
+     * @return void
      */
-    public function setImage(string $image) : void {
+    public function setImage(string $image): void {
         if (!is_string($image)) {
             throw new CException('The type for variable `image` is wrong.');
         }
@@ -337,9 +336,9 @@ class LeetSeoOpenGraph extends CApplicationComponent {
      * Set URL
      *
      * @param string $url
-     * @throws CException
+     * @return void
      */
-    public function setUrl(string $url) : void {
+    public function setUrl(string $url): void {
         if (!is_string($url)) {
             throw new CException('The type for variable `url` is wrong.');
         }
@@ -350,5 +349,4 @@ class LeetSeoOpenGraph extends CApplicationComponent {
 
         $this->url = $url;
     }
-
 }

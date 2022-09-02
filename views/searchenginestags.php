@@ -3,15 +3,15 @@
 /* @var $se LeetSeoSearchEngines */
 ?>
 
-<?php if ($se->description) : ?>
+<?php if ($se->description): ?>
     <meta name="description" content="<?= CHtml::encode($se->description) ?>">
 <?php endif; ?>
 
-<?php if ($se->keywords) : ?>
+<?php if ($se->keywords): ?>
     <meta name="keywords" content="<?= CHtml::encode($se->keywords) ?>">
 <?php endif; ?>
 
-<?php if ($se->robots) : ?>
+<?php if ($se->robots): ?>
     <meta name="robots" content="<?= CHtml::encode($se->robots) ?>">
 <?php endif; ?>
 
@@ -19,6 +19,6 @@
 
 <link rel="home" href="<?= Yii::app()->homeUrl; ?>">
 
-<?php if ($se->canonical) : ?>
+<?php if ($se->canonical): ?>
     <link rel="canonical" href="<?= CHtml::encode($se->canonical) ?>" />
 <?php endif; ?>

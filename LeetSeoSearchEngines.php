@@ -57,9 +57,9 @@ class LeetSeoSearchEngines extends CApplicationComponent {
      * @param string|null $description
      * @param string|null $keywords
      * @param string|null $robots
-     * @throws CException
+     * @return void
      */
-    public function setTags(string $title = null, string $description = null, string $keywords = null, string $robots = null) : void {
+    public function setTags(?string $title = null, ?string $description = null, ?string $keywords = null, ?string $robots = null): void {
         if (!empty($title)) {
             $this->setTitle($title);
         }
@@ -81,9 +81,9 @@ class LeetSeoSearchEngines extends CApplicationComponent {
      * Set title
      *
      * @param string $title
-     * @throws CException
+     * @return void
      */
-    public function setTitle(string $title) : void {
+    public function setTitle(string $title): void {
         if (!is_string($title)) {
             throw new CException('The type for variable `title` is wrong.');
         }
@@ -95,9 +95,9 @@ class LeetSeoSearchEngines extends CApplicationComponent {
      * Set description
      *
      * @param string $description
-     * @throws CException
+     * @return void
      */
-    public function setDescription(string $description) : void {
+    public function setDescription(string $description): void {
         if (!is_string($description)) {
             throw new CException('The type for variable `description` is wrong.');
         }
@@ -109,9 +109,9 @@ class LeetSeoSearchEngines extends CApplicationComponent {
      * Set keywords
      *
      * @param string $keywords
-     * @throws CException
+     * @return void
      */
-    public function setKeywords(string $keywords) : void {
+    public function setKeywords(string $keywords): void {
         if (!is_string($keywords)) {
             throw new CException('The type for variable `keywords` is wrong.');
         }
@@ -123,9 +123,9 @@ class LeetSeoSearchEngines extends CApplicationComponent {
      * Set robots
      *
      * @param string $robots
-     * @throws CException
+     * @return void
      */
-    public function setRobots(string $robots) : void {
+    public function setRobots(string $robots): void {
         if (!is_string($robots)) {
             throw new CException('The type for variable `robots` is wrong.');
         }
@@ -137,14 +137,13 @@ class LeetSeoSearchEngines extends CApplicationComponent {
      * Set canonical
      *
      * @param string $canonical
-     * @throws CException
+     * @return void
      */
-    public function setCanonical(string $canonical) : void {
+    public function setCanonical(string $canonical): void {
         if (!is_string($canonical)) {
             throw new CException('The type for variable `canonical` is wrong.');
         }
 
         $this->canonical = $canonical;
     }
-
 }
