@@ -247,6 +247,11 @@ class LeetSeoOpenGraph extends CApplicationComponent {
     public $htmlTagPrefix = 'og: http://ogp.me/ns#';
 
     /**
+     * @var string|null
+     */
+    public $updatedTime;
+
+    /**
      * {@inheritDoc}
      */
     public function init() {
