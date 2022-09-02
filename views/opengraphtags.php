@@ -69,7 +69,7 @@
 <?php endif; ?>
 
 <?php if ($og->video): ?>
-    <meta property="og:site_name" content="<?= CHtml::encode($og->video) ?>">
+    <meta property="og:video" content="<?= CHtml::encode($og->video) ?>">
 <?php endif; ?>
 
 <?php if ($og->videoUrl): ?>
